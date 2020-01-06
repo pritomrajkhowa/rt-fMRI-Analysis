@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+<script language="JavaScript"><!--
+function refreshIt() {
+   if (!document.images) return;
+   document.images['myCam1'].src = 'active_map.png?' + Math.random();
+   document.images['myCam2'].src = 'designed_matrix1.png?' + Math.random();
+   document.images['myCam3'].src = 'designed_matrix2.png?' + Math.random();
+   setTimeout('refreshIt()',5000); // refresh every 5 secs
+}
+//--></script>
+</head>
+
+<body onLoad=" setTimeout('refreshIt()',5000)">
+
+<img src="active_map.png" name="myCam1">
+<div class="row">
+  <div class="column">
+    <img src="designed_matrix1.png" name="myCam2" alt="design matrix" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="designed_matrix2.png" name="myCam3" alt="design matrix" style="width:100%">
+  </div>
+</div> 
+</body>
+
+</html>
